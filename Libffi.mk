@@ -22,6 +22,8 @@ LOCAL_C_INCLUDES := \
 	external/libffi/include \
 	external/libffi/$(ffi_os)-$(ffi_arch)
 
+LOCAL_ASFLAGS += -D__SOFTFP__ -no-integrated-as
+
 ifeq ($(ffi_os)-$(ffi_arch),linux-arm)
   LOCAL_SRC_FILES := src/arm/sysv.S src/arm/ffi.c
 endif

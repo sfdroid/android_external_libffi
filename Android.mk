@@ -24,7 +24,7 @@ LOCAL_PATH:= $(call my-dir)
 #
 
 # We only build ffi for mips.
-ifeq ($(TARGET_ARCH),mips)
+#ifeq ($(TARGET_ARCH),mips)
 
    include $(CLEAR_VARS)
 
@@ -39,7 +39,7 @@ ifeq ($(TARGET_ARCH),mips)
 
    include $(BUILD_SHARED_LIBRARY)
 
-endif
+#endif
 
 # Also include the rules for the test suite.
 include external/libffi/testsuite/Android.mk
